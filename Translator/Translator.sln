@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TranslatorImpl", "TranslatorImpl\TranslatorImpl.csproj", "{BE0FA0DD-86DE-4420-A3C7-88214D83F47E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Translator", "Translator\Translator.csproj", "{DE9DF9C1-6C3C-45E4-B170-6013E8684A72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE0FA0DD-86DE-4420-A3C7-88214D83F47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0FA0DD-86DE-4420-A3C7-88214D83F47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0FA0DD-86DE-4420-A3C7-88214D83F47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE0FA0DD-86DE-4420-A3C7-88214D83F47E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9DF9C1-6C3C-45E4-B170-6013E8684A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9DF9C1-6C3C-45E4-B170-6013E8684A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9DF9C1-6C3C-45E4-B170-6013E8684A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9DF9C1-6C3C-45E4-B170-6013E8684A72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
