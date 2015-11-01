@@ -1,0 +1,7 @@
+C:\Users\Павел\Documents\Visual Studio 2013\Projects\DisruptTheLecture\DisruptTheLecture\bin\Debug\DisruptTheLecture.exe.config
+C:\Users\Павел\Documents\GitHub\sss\DisruptTheLecture\DisruptTheLecture\bin\Debug\DisruptTheLecture.exe.config
+C:\Users\Павел\Documents\GitHub\sss\DisruptTheLecture\DisruptTheLecture\bin\Debug\DisruptTheLecture.exe
+C:\Users\Павел\Documents\GitHub\sss\DisruptTheLecture\DisruptTheLecture\bin\Debug\DisruptTheLecture.pdb
+C:\Users\Павел\Documents\GitHub\sss\DisruptTheLecture\DisruptTheLecture\obj\Debug\DisruptTheLecture.csprojResolveAssemblyReference.cache
+C:\Users\Павел\Documents\GitHub\sss\DisruptTheLecture\DisruptTheLecture\obj\Debug\DisruptTheLecture.exe
+C:\Users\Павел\Documents\GitHub\sss\DisruptTheLecture\DisruptTheLecture\obj\Debug\DisruptTheLecture.pdb
