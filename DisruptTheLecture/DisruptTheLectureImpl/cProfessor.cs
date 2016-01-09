@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DisruptTheLectureImpl
 {
-    struct ProfessorsMood
+    public struct ProfessorsMood
     {
         int _maxReprimandedStudents;
         public int maxReprimandedStudents
@@ -14,30 +14,61 @@ namespace DisruptTheLectureImpl
             get { return _maxReprimandedStudents; }
             set { _maxReprimandedStudents = value; }
         }
-        int _maxReprimandPerStudent;
+        int _maxReprimandsPerStudent;
         public int maxReprimandsPerStudent
         {
             get { return _maxReprimandsPerStudent; }
             set { _maxReprimandsPerStudent = value; }
         }
     }
-    class cProfessor : IPlayersListener
+    enum LineOfSight
     {
-        ProfessorsMood mood;
-        bool lineOfSight;
-        int hearingDistance;
-        public void MakeReprimand(cStudentAtLecture target)
+        classroom, blackboard
+    }
+    public class cProfessor
+    {
+        public ProfessorsMood mood;
+        LineOfSight lineOfSight;
+        public int hearingDistance;
+        public int reprimandedStudents;
+
+        private cPlayer PlayerTalkWithNeighbourSender;
+        public void SetPlayerTalkWithNeighbourSender(cPlayer x)
+        {
+            PlayerTalkWithNeighbourSender = x;
+            if (CanHear(x))
+                PlayerTalkWithNeighbourSender.PlayerTalkWithNeighbourEventList += new cPlayer.PlayerTalkWithNeighbourEventHandler(ProfessorPlayerTalkWithNeighbourEventHandler);
+        }
+        public void ProfessorPlayerTalkWithNeighbourEventHandler(cPlayer sender)
+        {
+            sender.heard = true;
+            MakeReprimand(sender);
+        }
+
+        private cPlayer PlayerThrowPaperSender;
+        public void SetPlayerThrowPaperSender(cPlayer x)
+        {
+            PlayerThrowPaperSender = x;
+            PlayerThrowPaperSender.PlayerThrowPaperEventList += new cPlayer.PlayerThrowPaperEventHandler(ProfessorPlayerThrowPaperEventHandler);
+        }
+        public void ProfessorPlayerThrowPaperEventHandler(cPlayer sender)
+        {
+            if (lineOfSight == LineOfSight.classroom)
+            {
+                sender.heard = true;
+                MakeReprimand(sender);
+            }
+        }
+
+        public void MakeReprimand(cStudent target)
         {
             target.reprimands++;
-            if (target.reprimands > mood.maxReprimandsPerStudent)
-        }
-        public void MakeReprimand(cPlayer target)
+            target.StudentProfessorMakeReprimandEventHandler(this);
+        } //TODO
+        public bool CanHear(cStudent source)
         {
-            target.reprimands++;
-        }
-        public override bool CanHear(cStudent source) //TODO
-        {
-            return true;
+            sCoords playerCoords = cСlassroom.Seat(source);
+            return playerCoords.x >= source.volume;
         }
     }
 }

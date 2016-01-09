@@ -47,6 +47,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DisruptTheLectureImpl\DisruptTheLectureImpl.csproj">
+      <Project>{c5f07968-b516-4dd9-98e7-1df7cad5a0dc}</Project>
+      <Name>DisruptTheLectureImpl</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
